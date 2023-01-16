@@ -1,0 +1,18 @@
+function fetchSpeedometerValue() {
+  // Use the fetch API to call the speedometer endpoint
+  return fetch('https://example.com/api/speedometer')
+    // Parse the response as JSON
+    .then(response => response.json())
+    // Extract the value from the data
+    .then(data => data.value)
+    // Handle any errors that occur during the fetch
+    .catch(error => console.error(error));
+}
+
+
+This function uses the fetch API to make a GET request to the specified endpoint and returns a promise that resolves to the speedometer value. You can use it in the following way:
+
+
+fetchSpeedometerValue().then(value => {
+  console.log(value);
+});
